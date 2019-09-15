@@ -1,7 +1,7 @@
 /* This is the data we will be using, study it but don't change anything, yet. */
 
 let menuItems = [
-  'Students',
+  'CST 334: Operating Systems',
   'Faculty',
   "What's New",
   'Tech Trends',
@@ -44,6 +44,18 @@ function menuComponent(arr) {
   });
 
   const menuButton = document.querySelector('.menu-button');
+  const onMenuClick = document.querySelector('.menu')
+
+  let Anchors = document.getElementsByTagName("a");
+  console.log("anchors: ", Anchors)
+  for (let i=0; i < Anchors.length; i++)
+  {
+    Anchors.addEventListener('click', () => {
+      preventDefault();
+      window.location = this.href;
+    })
+  }
+  
 
   menuButton.addEventListener('click', () => {
     menu.classList.toggle('menu--open');

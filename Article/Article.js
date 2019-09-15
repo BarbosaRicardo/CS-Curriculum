@@ -8,6 +8,7 @@ const data = [
                     The course will focus on Linux OS. Also students will learn Linux command lines, shell scripts, and to build software with GNU utilities. 
                     Then the students will have some understanding of how virtual machines works, for example virtualization and cloud computing.`,
     secondParagraph: `Why it is Important: Knowing how the memory and peripheral resources are managed will help us to write more efficient software. Learning Linux OS is needed for embedded system software engineer. `,
+    button: `Previous Syllabus`
   },
   {
     title: 'Internet Programming (PHP)',
@@ -38,7 +39,42 @@ const data = [
     firstParagraph: `What it is: Students will explore the inclinations, prejudices and accessibility of information technology for different race, gender, class and location. After identifying the issues, Students will develop a short and long term technology related activities to address the issues. Then students will implement the activities in their local communities through a volunteer 30 hour service.`,
 
     secondParagraph: `Why it is important: To prepare ourselves to be an ethical technical professional with social awareness and responsibility. `,
-  }
+  },
+
+  {
+    title: 'Algorithms (C++ or Java)',
+    date: 'CST 370',
+    firstParagraph: `ERROR`,
+
+    secondParagraph: `404 NOT FOUND `,
+  },
+
+  {
+    title: 'Software Design (Java)',
+    date: 'CST 338',
+    firstParagraph: `ERROR`,
+
+    secondParagraph: `404 NOT FOUND `,
+  },
+
+  {
+    title: 'Software Engineering',
+    date: 'CST 438',
+    firstParagraph: `What it is: A course for preparing students to use principles and techniques for the development of large-scale software.  The course will review software process, requirements analysis and specification, software design, implementation, testing, and project management.  Also, students will be working in teams to produce a working viable product by the end of this course. 
+    `,
+
+    secondParagraph: `Why it is important: Learning to design and implement software with a team will develop real-life work skills.  Software development is a team effort, and with the study of project management, this class will help students utilize their personal techniques, along with using principles of software development. `
+  },
+
+  {
+    title: 'Data Science',
+    date: 'CST 383',
+    firstParagraph: `What it is:  A course in data science is applying data analysis and machine learning techniques to illustrate data, read trends, and make educated predictions. In this course students will learn how to obtain data, preprocess it, apply machine learning methods, and display the results in a visual fashion. Students will learn the 5 stages of the data science life cycle: capture, maintain, process, analyze, and communicate data. `,
+
+    secondParagraph: `Why this is important: Learning how to extract meaning out of data and interpreting that data requires both tools and knowledge in statistics and machine learning.  Data science is streamlined to be the future of artificial intelligence; as machine learning is used to make predictions, discover patterns, and predict analytics.`
+  },
+
+
 ];
 
 /* Step 1: Create a function that creates a component. You will want your component to look like the template below: 
@@ -75,6 +111,7 @@ function createArticle(arg) {
   const firstP = document.createElement('p')
   const secondP = document.createElement('p')
   const thirdP = document.createElement('p')
+  const button = document.createElement('button')
   const expand = document.createElement('span')
 
   //set textContent 
@@ -84,6 +121,7 @@ function createArticle(arg) {
   firstP.textContent = arg.firstParagraph
   secondP.textContent = arg.secondParagraph
   thirdP.textContent = arg.thirdParagraph
+  button.textContent = arg.button
 
 
 
@@ -93,13 +131,16 @@ function createArticle(arg) {
   article.appendChild(firstP)
   article.appendChild(secondP)
   article.appendChild(thirdP)
+  article.appendChild(button)
   article.appendChild(expand)
 
   //set class names 
   article.classList.add('article')
   articleDate.classList.add('date')
+  article.classList.add('button')
   expand.classList.add('expandButton')
   
+
 
   //span event
   expand.addEventListener('click', () => {
