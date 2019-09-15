@@ -8,7 +8,6 @@ const data = [
                     The course will focus on Linux OS. Also students will learn Linux command lines, shell scripts, and to build software with GNU utilities. 
                     Then the students will have some understanding of how virtual machines works, for example virtualization and cloud computing.`,
     secondParagraph: `Why it is Important: Knowing how the memory and peripheral resources are managed will help us to write more efficient software. Learning Linux OS is needed for embedded system software engineer. `,
-    button: `Previous Syllabus`
   },
   {
     title: 'Internet Programming (PHP)',
@@ -111,7 +110,6 @@ function createArticle(arg) {
   const firstP = document.createElement('p')
   const secondP = document.createElement('p')
   const thirdP = document.createElement('p')
-  const button = document.createElement('button')
   const expand = document.createElement('span')
 
   //set textContent 
@@ -121,7 +119,6 @@ function createArticle(arg) {
   firstP.textContent = arg.firstParagraph
   secondP.textContent = arg.secondParagraph
   thirdP.textContent = arg.thirdParagraph
-  button.textContent = arg.button
 
 
 
@@ -131,13 +128,11 @@ function createArticle(arg) {
   article.appendChild(firstP)
   article.appendChild(secondP)
   article.appendChild(thirdP)
-  article.appendChild(button)
   article.appendChild(expand)
 
   //set class names 
   article.classList.add('article')
   articleDate.classList.add('date')
-  article.classList.add('button')
   expand.classList.add('expandButton')
   
 

@@ -1,12 +1,12 @@
 /* This is the data we will be using, study it but don't change anything, yet. */
 
 let menuItems = [
-  'CST 334: Operating Systems',
-  'Faculty',
-  "What's New",
-  'Tech Trends',
-  'Music',
-  'Log Out'
+  'Syllabi:',
+  'CST 334',
+  "CST 336",
+  'CST .',
+  'CST ...',
+  'CST ....'
 ];
 
 /* 
@@ -50,7 +50,7 @@ function menuComponent(arr) {
   console.log("anchors: ", Anchors)
   for (let i=0; i < Anchors.length; i++)
   {
-    Anchors.addEventListener('click', () => {
+    onMenuClick.addEventListener('click', () => {
       preventDefault();
       window.location = this.href;
     })
